@@ -1,2 +1,48 @@
-body {
-  background-color: #123456; }
+* {
+  padding: 0;
+  margin: 0; }
+
+section {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 20vh 80vh;
+  min-height: 100vh;
+  min-width: 100vw; }
+  section header {
+    grid-column: span 12;
+    background-color: #123456;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); }
+    section header .logo {
+      grid-column: span 12;
+      justify-self: center; }
+    section header span {
+      grid-column: span 3;
+      justify-self: center; }
+  section article {
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); }
+    section article aside {
+      grid-column: span 6;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(6, 1fr); }
+      section article aside .big {
+        grid-column: 2 / span 5;
+        grid-row: 1 / span 4; }
+      section article aside .voresTilbud {
+        grid-column: span 6;
+        grid-row: span 2;
+        justify-self: center;
+        align-self: center; }
+    section article main {
+      grid-column: span 6;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 14% 25% 25% 36%; }
+    section article h2 {
+      grid-column: span 2; }
+    section article .tilbud {
+      grid-column: span 2;
+      justify-self: center; }

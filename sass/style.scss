@@ -1,5 +1,77 @@
-$main-color: #123456;
+$color: #123456;
 
-body {
-  background-color: $main-color;
+* {
+  padding: 0;
+
+  margin: 0;
+}
+// html skelet start
+section {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 20vh 80vh;
+  min-height: 100vh;
+  min-width: 100vw;
+
+  header {
+    grid-column: span 12;
+    background-color: $color;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    .logo {
+      grid-column: span 12;
+      justify-self: center;
+    }
+
+    span {
+      grid-column: span 3;
+      justify-self: center;
+    }
+  }
+  //  html skelet afsluttet
+
+  // placering af indhold start
+  article {
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    // styling af venstre side
+    aside {
+      grid-column: span 6;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+
+      .big {
+        grid-column: 2 / span 5;
+        grid-row: 1 / span 4;
+      }
+
+      .voresTilbud {
+        grid-column: span 6;
+        grid-row: span 2;
+        justify-self: center;
+        align-self: center;
+      }
+    }
+
+    // styling af højre side
+    main {
+      grid-column: span 6;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 14% 25% 25% 36%;
+    }
+    h2 {
+      grid-column: span 2;
+    }
+    .tilbud {
+      grid-column: span 2;
+      justify-self: center;
+    }
+  }
+
+  // placering af indhold slut
 }
