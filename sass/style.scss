@@ -1,15 +1,30 @@
-$color: #123456;
-
+$color: #003335;
+$secondcolor: -webkit-linear-gradient(
+  0deg,
+  rgba(7, 75, 92, 1) 0%,
+  rgba(95, 164, 165, 1) 34.98%,
+  rgba(131, 201, 195, 1) 51.36%,
+  rgba(126, 196, 191, 1) 58.64%,
+  rgba(110, 180, 178, 1) 67.88%,
+  rgba(85, 154, 156, 1) 78.17%,
+  rgba(49, 118, 127, 1) 89.13%,
+  rgba(7, 75, 92, 1) 100%
+);
+$greycolor: #e5e5e5;
+$redcolor: #c91f26;
 * {
   padding: 0;
-
   margin: 0;
+}
+
+body {
+  overflow-x: hidden;
 }
 // html skelet start
 section {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 20vh 80vh;
+  grid-template-rows: 25vh auto;
   min-height: 100vh;
   min-width: 100vw;
 
@@ -22,13 +37,48 @@ section {
     .logo {
       grid-column: span 12;
       justify-self: center;
-    }
+      display: grid;
 
-    span {
-      grid-column: span 3;
-      justify-self: center;
+      img {
+        justify-self: center;
+        align-self: center;
+        width: 50%;
+      }
+    }
+    .info {
+      grid-column: span 12;
+      display: grid;
+      background: $secondcolor;
+
+      grid-template-columns: repeat(12, 1fr);
+
+      span {
+        grid-column: span 3;
+        justify-self: center;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        font-size: 0.9em;
+        text-align: center;
+
+        img {
+          width: 22%;
+        }
+
+        img:nth-child(3) {
+          width: 30%;
+          align-self: flex-start;
+        }
+      }
     }
   }
+
+  footer {
+    grid-column: span 12;
+    height: 6vh;
+    background: $secondcolor;
+  }
+
   //  html skelet afsluttet
 
   // placering af indhold start
@@ -39,37 +89,101 @@ section {
 
     // styling af venstre side
     aside {
+      margin-top: 3vh;
       grid-column: span 6;
       display: grid;
+      grid-gap: 10px;
       grid-template-columns: repeat(6, 1fr);
       grid-template-rows: repeat(6, 1fr);
+      margin-left: 0.5vw;
+
+      .little {
+        width: 100%;
+      }
 
       .big {
         grid-column: 2 / span 5;
         grid-row: 1 / span 4;
+        width: 82%;
       }
 
       .voresTilbud {
-        grid-column: span 6;
+        grid-column: 3 / span 2;
         grid-row: span 2;
-        justify-self: center;
         align-self: center;
+
+        .tilbuddet {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          justify-items: center;
+        }
+
+        img {
+          width: 100%;
+        }
+
+        img:nth-child(2) {
+          width: 55%;
+          align-self: center;
+        }
+
+        img:nth-child(3) {
+          width: 130%;
+        }
       }
     }
 
     // styling af højre side
     main {
       grid-column: span 6;
+      padding-top: 3vh;
+      grid-row-gap: 30px;
+      margin-left: -6vw;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: 14% 25% 25% 36%;
+      background-color: $greycolor;
+
+      .beskrivelse {
+        display: grid;
+        justify-items: center;
+
+        img {
+          width: 20%;
+        }
+
+        p {
+          text-align: center;
+        }
+      }
     }
     h2 {
       grid-column: span 2;
+      justify-self: center;
+      font-size: 2em;
     }
     .tilbud {
       grid-column: span 2;
-      justify-self: center;
+      justify-self: flex-end;
+      align-self: flex-start;
+      margin-right: 4vw;
+      margin-top: -3vh;
+
+      h3 {
+        color: $redcolor;
+        font-size: 2em;
+        text-align: center;
+      }
+
+      button {
+        background-color: $color;
+        border-radius: 15px;
+        width: 20vw;
+        height: 10vh;
+        color: white;
+        font-size: 1.5em;
+        border: none;
+      }
     }
   }
 
