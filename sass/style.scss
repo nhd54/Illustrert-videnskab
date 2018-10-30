@@ -28,6 +28,13 @@ section {
   min-height: 100vh;
   min-width: 100vw;
 
+  .air {
+    grid-column: span 12;
+    height: 5vh;
+    margin-top: 6vh;
+    background-color: $color;
+    width: 100vw;
+  }
   header {
     grid-column: span 12;
     background-color: $color;
@@ -58,7 +65,7 @@ section {
         display: grid;
         align-items: center;
         justify-items: center;
-        font-size: 0.9em;
+        font-size: 1.3vw;
         text-align: center;
 
         img {
@@ -75,8 +82,19 @@ section {
 
   footer {
     grid-column: span 12;
-    height: 6vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    min-height: 40vh;
+    height: auto;
     background: $secondcolor;
+
+    .footerInfo {
+      grid-column: span 3;
+      justify-self: center;
+      align-self: center;
+      font-size: 1vw;
+      color: white;
+    }
   }
 
   //  html skelet afsluttet
@@ -86,6 +104,131 @@ section {
     grid-column: span 12;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+
+    .andreTilbud {
+      grid-column: span 12;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 20px;
+      padding: 1vw;
+
+      .shortText {
+        grid-column: 2 / span 5;
+        align-self: flex-end;
+        justify-self: flex-start;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      button {
+        background-color: $color;
+        border-radius: 15px;
+        width: 20vw;
+        height: 10vh;
+        color: white;
+        font-size: 1.5em;
+        border: none;
+      }
+    }
+
+    .kundeservice {
+      grid-column: span 6;
+
+      button {
+        margin-top: 4vh;
+        background-color: $color;
+        border-radius: 25px;
+        width: 30vw;
+        height: 8vh;
+        color: white;
+        font-size: 1.5em;
+        border: none;
+      }
+    }
+
+    .nyhed {
+      grid-column: span 12;
+      height: 70vh;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      margin-top: 5vh;
+
+      .nyhedsbrev {
+        grid-column: span 6;
+
+        h2 {
+          font-size: 2vw;
+          text-align: center;
+        }
+        p {
+          font-size: 1.2vw;
+          padding: 2vw 0vw 2vw 6.3vw;
+        }
+
+        span {
+          padding: 1vw 9vw;
+        }
+
+        button {
+          margin: 2vw 0vw 2vw 6.3vw;
+          background-color: $color;
+          border-radius: 25px;
+          width: 15vw;
+          height: 10vh;
+          color: white;
+          font-size: 1.5em;
+          border: none;
+        }
+
+        form {
+          text-align: center;
+          margin-top: 3vh;
+
+          input {
+            width: 77%;
+            height: 6vh;
+            border-radius: 5px;
+            margin-top: 2vh;
+            border: 2px solid $color;
+          }
+        }
+      }
+    }
+
+    .infobox {
+      margin-top: 5vh;
+      height: 80vh;
+      background-color: $color;
+      grid-column: span 12;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+
+      img {
+        width: 80%;
+        grid-column: span 6;
+        justify-self: center;
+        align-self: center;
+      }
+      .info {
+        grid-column: span 6;
+        padding-top: 8vh;
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        color: white;
+      }
+      span {
+        font-size: 0.9vw;
+      }
+      p {
+        font-size: 0.9vw;
+      }
+      strong {
+        font-size: 1.2vw;
+      }
+    }
 
     // styling af venstre side
     aside {
@@ -142,7 +285,6 @@ section {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: 14% 25% 25% 36%;
-      background-color: $greycolor;
 
       .beskrivelse {
         display: grid;
@@ -154,13 +296,14 @@ section {
 
         p {
           text-align: center;
+          font-size: 1.6vw;
         }
       }
     }
     h2 {
       grid-column: span 2;
       justify-self: center;
-      font-size: 2em;
+      font-size: 3vw;
     }
     .tilbud {
       grid-column: span 2;
@@ -171,7 +314,7 @@ section {
 
       h3 {
         color: $redcolor;
-        font-size: 2em;
+        font-size: 3vw;
         text-align: center;
       }
 
@@ -186,6 +329,27 @@ section {
       }
     }
   }
-
   // placering af indhold slut
+}
+
+@media only screen and (max-width: 1200px) {
+  section article {
+    aside {
+      grid-column: 2 / span 11;
+    }
+
+    main {
+      grid-column: span 12;
+    }
+
+    .tilbud {
+      margin: 0;
+      justify-self: center;
+
+      button {
+        width: 50vw;
+        margin-bottom: 20px;
+      }
+    }
+  }
 }

@@ -11,6 +11,12 @@ section {
   grid-template-rows: 25vh auto;
   min-height: 100vh;
   min-width: 100vw; }
+  section .air {
+    grid-column: span 12;
+    height: 5vh;
+    margin-top: 6vh;
+    background-color: #003335;
+    width: 100vw; }
   section header {
     grid-column: span 12;
     background-color: #003335;
@@ -35,7 +41,7 @@ section {
         display: grid;
         align-items: center;
         justify-items: center;
-        font-size: 0.9em;
+        font-size: 1.3vw;
         text-align: center; }
         section header .info span img {
           width: 22%; }
@@ -44,12 +50,111 @@ section {
           align-self: flex-start; }
   section footer {
     grid-column: span 12;
-    height: 6vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    min-height: 40vh;
+    height: auto;
     background: -webkit-linear-gradient(0deg, #074b5c 0%, #5fa4a5 34.98%, #83c9c3 51.36%, #7ec4bf 58.64%, #6eb4b2 67.88%, #559a9c 78.17%, #31767f 89.13%, #074b5c 100%); }
+    section footer .footerInfo {
+      grid-column: span 3;
+      justify-self: center;
+      align-self: center;
+      font-size: 1vw;
+      color: white; }
   section article {
     grid-column: span 12;
     display: grid;
     grid-template-columns: repeat(12, 1fr); }
+    section article .andreTilbud {
+      grid-column: span 12;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 20px;
+      padding: 1vw; }
+      section article .andreTilbud .shortText {
+        grid-column: 2 / span 5;
+        align-self: flex-end;
+        justify-self: flex-start; }
+      section article .andreTilbud img {
+        width: 100%; }
+      section article .andreTilbud button {
+        background-color: #003335;
+        border-radius: 15px;
+        width: 20vw;
+        height: 10vh;
+        color: white;
+        font-size: 1.5em;
+        border: none; }
+    section article .kundeservice {
+      grid-column: span 6; }
+      section article .kundeservice button {
+        margin-top: 4vh;
+        background-color: #003335;
+        border-radius: 25px;
+        width: 30vw;
+        height: 8vh;
+        color: white;
+        font-size: 1.5em;
+        border: none; }
+    section article .nyhed {
+      grid-column: span 12;
+      height: 70vh;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      margin-top: 5vh; }
+      section article .nyhed .nyhedsbrev {
+        grid-column: span 6; }
+        section article .nyhed .nyhedsbrev h2 {
+          font-size: 2vw;
+          text-align: center; }
+        section article .nyhed .nyhedsbrev p {
+          font-size: 1.2vw;
+          padding: 2vw 0vw 2vw 6.3vw; }
+        section article .nyhed .nyhedsbrev span {
+          padding: 1vw 9vw; }
+        section article .nyhed .nyhedsbrev button {
+          margin: 2vw 0vw 2vw 6.3vw;
+          background-color: #003335;
+          border-radius: 25px;
+          width: 15vw;
+          height: 10vh;
+          color: white;
+          font-size: 1.5em;
+          border: none; }
+        section article .nyhed .nyhedsbrev form {
+          text-align: center;
+          margin-top: 3vh; }
+          section article .nyhed .nyhedsbrev form input {
+            width: 77%;
+            height: 6vh;
+            border-radius: 5px;
+            margin-top: 2vh;
+            border: 2px solid #003335; }
+    section article .infobox {
+      margin-top: 5vh;
+      height: 80vh;
+      background-color: #003335;
+      grid-column: span 12;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr); }
+      section article .infobox img {
+        width: 80%;
+        grid-column: span 6;
+        justify-self: center;
+        align-self: center; }
+      section article .infobox .info {
+        grid-column: span 6;
+        padding-top: 8vh;
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        color: white; }
+      section article .infobox span {
+        font-size: 0.9vw; }
+      section article .infobox p {
+        font-size: 0.9vw; }
+      section article .infobox strong {
+        font-size: 1.2vw; }
     section article aside {
       margin-top: 3vh;
       grid-column: span 6;
@@ -86,19 +191,19 @@ section {
       margin-left: -6vw;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 14% 25% 25% 36%;
-      background-color: #e5e5e5; }
+      grid-template-rows: 14% 25% 25% 36%; }
       section article main .beskrivelse {
         display: grid;
         justify-items: center; }
         section article main .beskrivelse img {
           width: 20%; }
         section article main .beskrivelse p {
-          text-align: center; }
+          text-align: center;
+          font-size: 1.6vw; }
     section article h2 {
       grid-column: span 2;
       justify-self: center;
-      font-size: 2em; }
+      font-size: 3vw; }
     section article .tilbud {
       grid-column: span 2;
       justify-self: flex-end;
@@ -107,7 +212,7 @@ section {
       margin-top: -3vh; }
       section article .tilbud h3 {
         color: #c91f26;
-        font-size: 2em;
+        font-size: 3vw;
         text-align: center; }
       section article .tilbud button {
         background-color: #003335;
@@ -117,3 +222,15 @@ section {
         color: white;
         font-size: 1.5em;
         border: none; }
+
+@media only screen and (max-width: 1200px) {
+  section article aside {
+    grid-column: 2 / span 11; }
+  section article main {
+    grid-column: span 12; }
+  section article .tilbud {
+    margin: 0;
+    justify-self: center; }
+    section article .tilbud button {
+      width: 50vw;
+      margin-bottom: 20px; } }
