@@ -96,6 +96,31 @@ section {
         color: white;
         font-size: 1.5em;
         border: none; }
+    section article .payment {
+      grid-column: span 12;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr); }
+      section article .payment .order img {
+        width: 85%;
+        margin-top: 5vh; }
+      section article .payment .contactInfo {
+        grid-column: 2 / span 5; }
+        section article .payment .contactInfo form {
+          text-align: start;
+          margin-top: 3vh; }
+          section article .payment .contactInfo form input {
+            width: 40%;
+            height: 6vh;
+            border-radius: 5px;
+            margin-top: 2vh;
+            border: 2px solid #003335; }
+          section article .payment .contactInfo form .postNr {
+            width: 10%; }
+          section article .payment .contactInfo form .by {
+            margin-left: 1%;
+            width: 29%; }
+      section article .payment .order {
+        grid-column: span 6; }
     section article .nyhed {
       grid-column: span 12;
       height: 70vh;
@@ -104,6 +129,15 @@ section {
       margin-top: 5vh; }
       section article .nyhed .nyhedsbrev {
         grid-column: span 6; }
+        section article .nyhed .nyhedsbrev form {
+          text-align: center;
+          margin-top: 3vh; }
+          section article .nyhed .nyhedsbrev form input {
+            width: 77%;
+            height: 6vh;
+            border-radius: 5px;
+            margin-top: 2vh;
+            border: 2px solid #003335; }
         section article .nyhed .nyhedsbrev h2 {
           font-size: 2vw;
           text-align: center; }
@@ -121,15 +155,6 @@ section {
           color: white;
           font-size: 1.5em;
           border: none; }
-        section article .nyhed .nyhedsbrev form {
-          text-align: center;
-          margin-top: 3vh; }
-          section article .nyhed .nyhedsbrev form input {
-            width: 77%;
-            height: 6vh;
-            border-radius: 5px;
-            margin-top: 2vh;
-            border: 2px solid #003335; }
     section article .infobox {
       margin-top: 5vh;
       height: 80vh;

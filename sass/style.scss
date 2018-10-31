@@ -147,7 +147,48 @@ section {
         border: none;
       }
     }
+    .payment {
+      grid-column: span 12;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
 
+      .order {
+        img {
+          width: 85%;
+          margin-top: 5vh;
+        }
+      }
+
+      .contactInfo {
+        grid-column: 2 / span 5;
+
+        form {
+          text-align: start;
+          margin-top: 3vh;
+
+          input {
+            width: 40%;
+            height: 6vh;
+            border-radius: 5px;
+            margin-top: 2vh;
+            border: 2px solid $color;
+          }
+
+          .postNr {
+            width: 10%;
+          }
+
+          .by {
+            margin-left: 1%;
+            width: 29%;
+          }
+        }
+      }
+
+      .order {
+        grid-column: span 6;
+      }
+    }
     .nyhed {
       grid-column: span 12;
       height: 70vh;
@@ -157,6 +198,19 @@ section {
 
       .nyhedsbrev {
         grid-column: span 6;
+
+        form {
+          text-align: center;
+          margin-top: 3vh;
+
+          input {
+            width: 77%;
+            height: 6vh;
+            border-radius: 5px;
+            margin-top: 2vh;
+            border: 2px solid $color;
+          }
+        }
 
         h2 {
           font-size: 2vw;
@@ -180,19 +234,6 @@ section {
           color: white;
           font-size: 1.5em;
           border: none;
-        }
-
-        form {
-          text-align: center;
-          margin-top: 3vh;
-
-          input {
-            width: 77%;
-            height: 6vh;
-            border-radius: 5px;
-            margin-top: 2vh;
-            border: 2px solid $color;
-          }
         }
       }
     }
