@@ -1,20 +1,20 @@
-$color: #003335;
-$secondcolor: -webkit-linear-gradient(
-  0deg,
-  rgba(7, 75, 92, 1) 0%,
-  rgba(95, 164, 165, 1) 34.98%,
-  rgba(131, 201, 195, 1) 51.36%,
-  rgba(126, 196, 191, 1) 58.64%,
-  rgba(110, 180, 178, 1) 67.88%,
-  rgba(85, 154, 156, 1) 78.17%,
-  rgba(49, 118, 127, 1) 89.13%,
-  rgba(7, 75, 92, 1) 100%
-);
+$color: #013335;
+$secondcolor: #83bcaa;
 $greycolor: #e5e5e5;
 $redcolor: #c91f26;
 * {
   padding: 0;
   margin: 0;
+}
+
+span {
+  font-size: 0.9vw;
+}
+p {
+  font-size: 0.9vw;
+}
+strong {
+  font-size: 1.2vw;
 }
 
 body {
@@ -80,6 +80,19 @@ section {
     }
   }
 
+  .midPicture {
+    grid-column: span 12;
+    min-height: 50vh;
+    background-color: $color;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    img {
+      width: 25%;
+    }
+  }
+
   footer {
     grid-column: span 12;
     display: grid;
@@ -94,6 +107,10 @@ section {
       align-self: center;
       font-size: 1vw;
       color: white;
+
+      img {
+        width: 80%;
+      }
     }
   }
 
@@ -104,6 +121,29 @@ section {
     grid-column: span 12;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+
+    .theProduct {
+      grid-column: span 12;
+      min-height: 80vh;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      background-color: $color;
+      margin-top: 5vh;
+
+      .text {
+        align-self: center;
+        height: 70%;
+        grid-column: 2 / span 4;
+        color: white;
+      }
+
+      .picture {
+        grid-column: 7 / span 5;
+        width: 80%;
+        align-self: center;
+        justify-self: center;
+      }
+    }
 
     .andreTilbud {
       grid-column: span 12;
@@ -135,6 +175,12 @@ section {
 
     .kundeservice {
       grid-column: span 6;
+      display: grid;
+
+      .readers {
+        text-align: center;
+        width: 80%;
+      }
 
       button {
         margin-top: 4vh;
@@ -152,7 +198,72 @@ section {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
 
+      .finish {
+        grid-column: span 12;
+        display: none;
+        grid-template-columns: repeat(12, 1fr);
+      }
+
+      .cardInfo {
+        grid-column: 2 / span 5;
+        display: grid;
+
+        justify-items: flex-start;
+
+        .card {
+          width: 100%;
+        }
+
+        span {
+          display: grid;
+          grid-template-columns: 30% 70%;
+          width: 100%;
+
+          p {
+            justify-self: center;
+            align-self: center;
+          }
+        }
+
+        input {
+          width: 100%;
+          height: 6vh;
+          border-radius: 5px;
+          margin-top: 2vh;
+          border: 2px solid #013335;
+        }
+      }
+
+      .yourBuy {
+        grid-column: span 6;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        align-items: center;
+
+        img {
+          width: 40%;
+        }
+
+        img:nth-child(3) {
+          width: 60%;
+        }
+      }
+
       .order {
+        margin-top: 6vh;
+        grid-column: span 6;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .produkt {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+
+          img {
+            width: 60%;
+          }
+        }
         img {
           width: 85%;
           margin-top: 5vh;
@@ -162,7 +273,7 @@ section {
       .contactInfo {
         grid-column: 2 / span 5;
 
-        form {
+        .information {
           text-align: start;
           margin-top: 3vh;
 
@@ -183,21 +294,126 @@ section {
             width: 29%;
           }
         }
-      }
 
-      .order {
-        grid-column: span 6;
+        .inputGroup {
+          background-color: #fff;
+          display: block;
+          margin: 10px 0;
+          position: relative;
+
+          span {
+            position: absolute;
+            right: 17%;
+            top: 25%;
+            width: 41%;
+            font-size: 0.7vw;
+          }
+
+          .shortText {
+            top: -8%;
+            width: 78%;
+            right: -15%;
+          }
+
+          label {
+            padding: 8px 70px;
+            width: 10%;
+            border: 1px solid black;
+            display: block;
+            text-align: left;
+            color: #3c454c;
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+            transition: color 200ms ease-in;
+            overflow: hidden;
+
+            &:before {
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+              content: "";
+              background-color: #5562eb;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%) scale3d(1, 1, 1);
+              transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+              opacity: 0;
+              z-index: -1;
+            }
+
+            &:after {
+              width: 32px;
+              height: 32px;
+              content: "";
+              border: 2px solid #d1d7dc;
+              background-color: #fff;
+              background-repeat: no-repeat;
+              background-position: 2px 3px;
+              border-radius: 50%;
+              z-index: 2;
+              position: absolute;
+              left: 30px;
+              top: 50%;
+              transform: translateY(-50%);
+              cursor: pointer;
+              transition: all 200ms ease-in;
+            }
+          }
+
+          input[type="radio"]:checked + label {
+            font-weight: bold;
+            background-color: blue;
+            color: white;
+
+            &:after {
+              background-color: black;
+            }
+          }
+
+          input[type="radio"]:checked + label {
+            font-weight: bold;
+            background-color: blue;
+            color: white;
+          }
+
+          input {
+            width: 3vw;
+            height: 3vh;
+            order: 1;
+            z-index: 2;
+            position: absolute;
+            right: 24.5vw;
+            top: 43%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            visibility: hidden;
+          }
+
+          .yes {
+            visibility: visible;
+          }
+        }
+        .form {
+          padding: 0 16px;
+          max-width: 550px;
+          margin: 50px auto;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 36px;
+        }
       }
     }
     .nyhed {
       grid-column: span 12;
-      height: 70vh;
+      min-height: 75vh;
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       margin-top: 5vh;
 
       .nyhedsbrev {
-        grid-column: span 6;
+        grid-column: 2 / span 5;
 
         form {
           text-align: center;
@@ -217,7 +433,6 @@ section {
           text-align: center;
         }
         p {
-          font-size: 1.2vw;
           padding: 2vw 0vw 2vw 6.3vw;
         }
 
@@ -240,7 +455,7 @@ section {
 
     .infobox {
       margin-top: 5vh;
-      height: 80vh;
+      min-height: 80vh;
       background-color: $color;
       grid-column: span 12;
       display: grid;
@@ -248,8 +463,7 @@ section {
 
       img {
         width: 80%;
-        grid-column: span 6;
-        justify-self: center;
+        grid-column: 2 / span 5;
         align-self: center;
       }
       .info {
@@ -260,21 +474,12 @@ section {
         flex-direction: column;
         color: white;
       }
-      span {
-        font-size: 0.9vw;
-      }
-      p {
-        font-size: 0.9vw;
-      }
-      strong {
-        font-size: 1.2vw;
-      }
     }
 
     // styling af venstre side
     aside {
       margin-top: 3vh;
-      grid-column: span 6;
+      grid-column: 2 / span 5;
       display: grid;
       grid-gap: 10px;
       grid-template-columns: repeat(6, 1fr);
@@ -319,10 +524,10 @@ section {
 
     // styling af højre side
     main {
-      grid-column: span 6;
+      grid-column: span 5;
       padding-top: 3vh;
       grid-row-gap: 30px;
-      margin-left: -6vw;
+
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: 14% 25% 25% 36%;
@@ -337,7 +542,6 @@ section {
 
         p {
           text-align: center;
-          font-size: 1.6vw;
         }
       }
     }
@@ -348,8 +552,8 @@ section {
     }
     .tilbud {
       grid-column: span 2;
-      justify-self: flex-end;
-      align-self: flex-start;
+      justify-self: center;
+
       margin-right: 4vw;
       margin-top: -3vh;
 
@@ -362,7 +566,7 @@ section {
       button {
         background-color: $color;
         border-radius: 15px;
-        width: 20vw;
+        width: 30vw;
         height: 10vh;
         color: white;
         font-size: 1.5em;
@@ -374,6 +578,63 @@ section {
 }
 
 @media only screen and (max-width: 1200px) {
+  section article main .beskrivelse img {
+    width: 40%;
+  }
+
+  section article .infobox {
+    img {
+      width: 90%;
+      grid-column: span 12;
+      margin-top: 2vh;
+    }
+    .info {
+      grid-column: span 12;
+      text-align: center;
+    }
+  }
+  section article .nyhed {
+    min-height: 70vh;
+  }
+
+  section article .nyhed .nyhedsbrev button {
+    width: 85vw;
+  }
+
+  section article .nyhed .nyhedsbrev {
+    grid-column: span 12;
+  }
+
+  section article .kundeservice {
+    grid-column: span 12;
+    display: grid;
+    justify-items: center;
+  }
+
+  span {
+    font-size: 1.9vw;
+  }
+  p {
+    font-size: 1.9vw;
+  }
+  strong {
+    font-size: 2.2vw;
+  }
+
+  .order {
+    grid-column: span 12;
+
+    img {
+      width: 85%;
+      margin-top: 5vh;
+    }
+  }
+
+  .contactInfo {
+    grid-column: 2 / span 11;
+    display: grid;
+  }
+
   section article {
     aside {
       grid-column: 2 / span 11;

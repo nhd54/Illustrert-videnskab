@@ -31,9 +31,9 @@
             <div class="payment">
 
                 <div class="contactInfo">
-                    <br>
+
                     <h1>Angiv kontaktoplysninger</h1>
-                    <form>
+                    <form class="information">
                         <input type="text" placeholder="Fornavn:" name="fname"> <input type="text" placeholder="Email:"
                             name="fname"><br>
                         <input type="text" placeholder="Efternavn:" name="lname"> <input type="text" placeholder="Bekræft email:"
@@ -44,16 +44,122 @@
                             placeholder="By:" name="fname">
 
                     </form>
+                    <br>
+                    <form>
+                        <div class="inputGroup">
+
+                            <input type="checkbox" class="yes" id="test" name="vehicle3" value="Boat">
+                            <span>Jeg har læst og accepteret abonnementsbetingelserne <br> læs mere </span>
+                            <input id="option1" name="option1" type="radio" />
+                            <label for="option1">Visa Dankort</label>
+
+                        </div>
+
+
+                        <div class="inputGroup">
+                            <input type="checkbox" class="yes" id="test1" name="vehicle3" value="Boat">
+                            <span>Jeg har læst og accepteret vilkår for kortbetaling <br> betingelser</span>
+                            <input id="option2" name="option1" type="radio" />
+                            <label for="option2">Kreditkort</label>
+
+                        </div>
+
+                        <div class="inputGroup">
+                            <span class="shortText"> 2 nr. af Illustreret Videnskab + Elementum knivsæt for 49,50 kr. +
+                                39,50 kr. i porto
+                                og eksp <br> <br> Efter tilbuddet fortsætter du i løbende abonnement og kan til enhver
+                                tid opsige det.
+
+                            </span>
+                            <input id="option3" name="option1" type="radio" />
+                            <label for="option3">MobilePay</label>
+
+                        </div>
+
+                        <div class="inputGroup">
+                            <span class="shortText">
+                                <br>
+                                Illustreret Videnskab udkommer 18 gange om året <br> <br>
+                                Abonnementet betales for 4 numre ad gangen, i alt 315,80 kr.. (78,95 kr. pr. nummer)
+                            </span>
+                            <input id="option4" name="option1" type="radio" />
+                            <label for="option4">Girokort</label>
+
+                        </div>
+                    </form>
+
 
                 </div>
-                <div class="order">
 
+
+                <div class="order">
+                    <div class="text">
+                        <h3>Dit produkt</h3>
+                        <p>
+                            <strong> Du får </strong>
+                            2 nr. af Illustreret Videnskab 157,90 kr. <br>
+                            Elementum knivsæt 499 kr. <br>
+                            Værdi 656,90 kr. <br> <br>
+
+                            Din specialpris 49,50 kr.
+                            <br>
+                            <strong> Rabat 607,40 kr. </strong>
+                            <br>
+                            Porto og eksp. 39,50 kr.
+                            <br>
+                            <strong>
+                                I alt 89 kr. </strong>
+
+                        </p>
+                    </div>
+
+                    <div class="produkt">
+                        <img src="image/698_ill_web_cfbr_windbreaker_forside_dk-191x255.png" alt="">
+                        <img src="image/assets-09.png" alt="">
+                        <img src="image/325_ill_600x600_pre2949camiebillede-255x255.png" alt="">
+                    </div>
+
+                    <img src="image/325_ill_1440x1080_slider1_dk-834x625.jpg" alt="">
                     <img src="image/325_ill_1440x1080_slider1_dk-834x625.jpg" alt="">
 
                 </div>
+                <div class="air"></div>
+
+                <div class="finish">
+                    <div class="cardInfo">
+
+                        <form class="card">
+                            <span>
+                                <p> Kort nr. </p> <input type="text" placeholder="Fornavn:" name="fname">
+                            </span>
+                            <br>
+                            <span>
+                                <p> Fuldt navn på kortet </p> <input type="text" placeholder="Efternavn:" name="lname">
+                            </span>
+                            <br>
+                            <span>
+                                <p> DD/MM </p> <input type="text" placeholder="Efternavn:" name="lname">
+                            </span>
+                            <br>
+                        </form>
+
+                    </div>
+
+                    <div class="yourBuy">
+                        <img src="image/698_ill_web_cfbr_windbreaker_forside_dk-191x255.png" alt="">
+                        <img src="image/assets-09.png" alt="">
+                        <img src="image/325_ill_600x600_pre2949camiebillede-255x255.png" alt="">
+
+                    </div>
+                </div>
+
+
+
             </div>
         </article>
-        <article></article>
+        <article>
+            <div class="midPicture"> <img src="image/betaling-01.png" alt=""> </div>
+        </article>
         <article>
             <div class="andreTilbud">
                 <p class="shortText">Andre tilbud</p>
@@ -120,10 +226,12 @@
                 Glæd dig til seneste nyt fra forskernes frontlinje og spændende beretninger om nye <br>
                 teknologiske gennembrud. Altid forsynet med en videnskabelig forklaring undervejs.
             </div>
-            <div class="footerInfo"></div>
+            <div class="footerInfo"> <img src="image/betaling-01.png" alt=""> </div>
 
         </footer>
     </section>
+
+    <script src="script.js"></script>
 
 </body>
 

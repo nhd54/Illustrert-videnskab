@@ -2,6 +2,15 @@
   padding: 0;
   margin: 0; }
 
+span {
+  font-size: 0.9vw; }
+
+p {
+  font-size: 0.9vw; }
+
+strong {
+  font-size: 1.2vw; }
+
 body {
   overflow-x: hidden; }
 
@@ -15,11 +24,11 @@ section {
     grid-column: span 12;
     height: 5vh;
     margin-top: 6vh;
-    background-color: #003335;
+    background-color: #013335;
     width: 100vw; }
   section header {
     grid-column: span 12;
-    background-color: #003335;
+    background-color: #013335;
     display: grid;
     grid-template-columns: repeat(12, 1fr); }
     section header .logo {
@@ -33,7 +42,7 @@ section {
     section header .info {
       grid-column: span 12;
       display: grid;
-      background: -webkit-linear-gradient(0deg, #074b5c 0%, #5fa4a5 34.98%, #83c9c3 51.36%, #7ec4bf 58.64%, #6eb4b2 67.88%, #559a9c 78.17%, #31767f 89.13%, #074b5c 100%);
+      background: #83bcaa;
       grid-template-columns: repeat(12, 1fr); }
       section header .info span {
         grid-column: span 3;
@@ -48,23 +57,51 @@ section {
         section header .info span img:nth-child(3) {
           width: 30%;
           align-self: flex-start; }
+  section .midPicture {
+    grid-column: span 12;
+    min-height: 50vh;
+    background-color: #013335;
+    display: grid;
+    justify-items: center;
+    align-items: center; }
+    section .midPicture img {
+      width: 25%; }
   section footer {
     grid-column: span 12;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     min-height: 40vh;
     height: auto;
-    background: -webkit-linear-gradient(0deg, #074b5c 0%, #5fa4a5 34.98%, #83c9c3 51.36%, #7ec4bf 58.64%, #6eb4b2 67.88%, #559a9c 78.17%, #31767f 89.13%, #074b5c 100%); }
+    background: #83bcaa; }
     section footer .footerInfo {
       grid-column: span 3;
       justify-self: center;
       align-self: center;
       font-size: 1vw;
       color: white; }
+      section footer .footerInfo img {
+        width: 80%; }
   section article {
     grid-column: span 12;
     display: grid;
     grid-template-columns: repeat(12, 1fr); }
+    section article .theProduct {
+      grid-column: span 12;
+      min-height: 80vh;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      background-color: #013335;
+      margin-top: 5vh; }
+      section article .theProduct .text {
+        align-self: center;
+        height: 70%;
+        grid-column: 2 / span 4;
+        color: white; }
+      section article .theProduct .picture {
+        grid-column: 7 / span 5;
+        width: 80%;
+        align-self: center;
+        justify-self: center; }
     section article .andreTilbud {
       grid-column: span 12;
       display: grid;
@@ -78,7 +115,7 @@ section {
       section article .andreTilbud img {
         width: 100%; }
       section article .andreTilbud button {
-        background-color: #003335;
+        background-color: #013335;
         border-radius: 15px;
         width: 20vw;
         height: 10vh;
@@ -86,10 +123,14 @@ section {
         font-size: 1.5em;
         border: none; }
     section article .kundeservice {
-      grid-column: span 6; }
+      grid-column: span 6;
+      display: grid; }
+      section article .kundeservice .readers {
+        text-align: center;
+        width: 80%; }
       section article .kundeservice button {
         margin-top: 4vh;
-        background-color: #003335;
+        background-color: #013335;
         border-radius: 25px;
         width: 30vw;
         height: 8vh;
@@ -100,35 +141,162 @@ section {
       grid-column: span 12;
       display: grid;
       grid-template-columns: repeat(12, 1fr); }
-      section article .payment .order img {
-        width: 85%;
-        margin-top: 5vh; }
+      section article .payment .finish {
+        grid-column: span 12;
+        display: none;
+        grid-template-columns: repeat(12, 1fr); }
+      section article .payment .cardInfo {
+        grid-column: 2 / span 5;
+        display: grid;
+        justify-items: flex-start; }
+        section article .payment .cardInfo .card {
+          width: 100%; }
+        section article .payment .cardInfo span {
+          display: grid;
+          grid-template-columns: 30% 70%;
+          width: 100%; }
+          section article .payment .cardInfo span p {
+            justify-self: center;
+            align-self: center; }
+        section article .payment .cardInfo input {
+          width: 100%;
+          height: 6vh;
+          border-radius: 5px;
+          margin-top: 2vh;
+          border: 2px solid #013335; }
+      section article .payment .yourBuy {
+        grid-column: span 6;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        align-items: center; }
+        section article .payment .yourBuy img {
+          width: 40%; }
+        section article .payment .yourBuy img:nth-child(3) {
+          width: 60%; }
+      section article .payment .order {
+        margin-top: 6vh;
+        grid-column: span 6;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); }
+        section article .payment .order .produkt {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr); }
+          section article .payment .order .produkt img {
+            width: 60%; }
+        section article .payment .order img {
+          width: 85%;
+          margin-top: 5vh; }
       section article .payment .contactInfo {
         grid-column: 2 / span 5; }
-        section article .payment .contactInfo form {
+        section article .payment .contactInfo .information {
           text-align: start;
           margin-top: 3vh; }
-          section article .payment .contactInfo form input {
+          section article .payment .contactInfo .information input {
             width: 40%;
             height: 6vh;
             border-radius: 5px;
             margin-top: 2vh;
-            border: 2px solid #003335; }
-          section article .payment .contactInfo form .postNr {
+            border: 2px solid #013335; }
+          section article .payment .contactInfo .information .postNr {
             width: 10%; }
-          section article .payment .contactInfo form .by {
+          section article .payment .contactInfo .information .by {
             margin-left: 1%;
             width: 29%; }
-      section article .payment .order {
-        grid-column: span 6; }
+        section article .payment .contactInfo .inputGroup {
+          background-color: #fff;
+          display: block;
+          margin: 10px 0;
+          position: relative; }
+          section article .payment .contactInfo .inputGroup span {
+            position: absolute;
+            right: 17%;
+            top: 25%;
+            width: 41%;
+            font-size: 0.7vw; }
+          section article .payment .contactInfo .inputGroup .shortText {
+            top: -8%;
+            width: 78%;
+            right: -15%; }
+          section article .payment .contactInfo .inputGroup label {
+            padding: 8px 70px;
+            width: 10%;
+            border: 1px solid black;
+            display: block;
+            text-align: left;
+            color: #3c454c;
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+            transition: color 200ms ease-in;
+            overflow: hidden; }
+            section article .payment .contactInfo .inputGroup label:before {
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+              content: "";
+              background-color: #5562eb;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%) scale3d(1, 1, 1);
+              transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+              opacity: 0;
+              z-index: -1; }
+            section article .payment .contactInfo .inputGroup label:after {
+              width: 32px;
+              height: 32px;
+              content: "";
+              border: 2px solid #d1d7dc;
+              background-color: #fff;
+              background-repeat: no-repeat;
+              background-position: 2px 3px;
+              border-radius: 50%;
+              z-index: 2;
+              position: absolute;
+              left: 30px;
+              top: 50%;
+              transform: translateY(-50%);
+              cursor: pointer;
+              transition: all 200ms ease-in; }
+          section article .payment .contactInfo .inputGroup input[type="radio"]:checked + label {
+            font-weight: bold;
+            background-color: blue;
+            color: white; }
+            section article .payment .contactInfo .inputGroup input[type="radio"]:checked + label:after {
+              background-color: black; }
+          section article .payment .contactInfo .inputGroup input[type="radio"]:checked + label {
+            font-weight: bold;
+            background-color: blue;
+            color: white; }
+          section article .payment .contactInfo .inputGroup input {
+            width: 3vw;
+            height: 3vh;
+            order: 1;
+            z-index: 2;
+            position: absolute;
+            right: 24.5vw;
+            top: 43%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            visibility: hidden; }
+          section article .payment .contactInfo .inputGroup .yes {
+            visibility: visible; }
+        section article .payment .contactInfo .form {
+          padding: 0 16px;
+          max-width: 550px;
+          margin: 50px auto;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 36px; }
     section article .nyhed {
       grid-column: span 12;
-      height: 70vh;
+      min-height: 75vh;
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       margin-top: 5vh; }
       section article .nyhed .nyhedsbrev {
-        grid-column: span 6; }
+        grid-column: 2 / span 5; }
         section article .nyhed .nyhedsbrev form {
           text-align: center;
           margin-top: 3vh; }
@@ -137,18 +305,17 @@ section {
             height: 6vh;
             border-radius: 5px;
             margin-top: 2vh;
-            border: 2px solid #003335; }
+            border: 2px solid #013335; }
         section article .nyhed .nyhedsbrev h2 {
           font-size: 2vw;
           text-align: center; }
         section article .nyhed .nyhedsbrev p {
-          font-size: 1.2vw;
           padding: 2vw 0vw 2vw 6.3vw; }
         section article .nyhed .nyhedsbrev span {
           padding: 1vw 9vw; }
         section article .nyhed .nyhedsbrev button {
           margin: 2vw 0vw 2vw 6.3vw;
-          background-color: #003335;
+          background-color: #013335;
           border-radius: 25px;
           width: 15vw;
           height: 10vh;
@@ -157,15 +324,14 @@ section {
           border: none; }
     section article .infobox {
       margin-top: 5vh;
-      height: 80vh;
-      background-color: #003335;
+      min-height: 80vh;
+      background-color: #013335;
       grid-column: span 12;
       display: grid;
       grid-template-columns: repeat(12, 1fr); }
       section article .infobox img {
         width: 80%;
-        grid-column: span 6;
-        justify-self: center;
+        grid-column: 2 / span 5;
         align-self: center; }
       section article .infobox .info {
         grid-column: span 6;
@@ -174,15 +340,9 @@ section {
         align-content: center;
         flex-direction: column;
         color: white; }
-      section article .infobox span {
-        font-size: 0.9vw; }
-      section article .infobox p {
-        font-size: 0.9vw; }
-      section article .infobox strong {
-        font-size: 1.2vw; }
     section article aside {
       margin-top: 3vh;
-      grid-column: span 6;
+      grid-column: 2 / span 5;
       display: grid;
       grid-gap: 10px;
       grid-template-columns: repeat(6, 1fr);
@@ -210,10 +370,9 @@ section {
         section article aside .voresTilbud img:nth-child(3) {
           width: 130%; }
     section article main {
-      grid-column: span 6;
+      grid-column: span 5;
       padding-top: 3vh;
       grid-row-gap: 30px;
-      margin-left: -6vw;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: 14% 25% 25% 36%; }
@@ -223,16 +382,14 @@ section {
         section article main .beskrivelse img {
           width: 20%; }
         section article main .beskrivelse p {
-          text-align: center;
-          font-size: 1.6vw; }
+          text-align: center; }
     section article h2 {
       grid-column: span 2;
       justify-self: center;
       font-size: 3vw; }
     section article .tilbud {
       grid-column: span 2;
-      justify-self: flex-end;
-      align-self: flex-start;
+      justify-self: center;
       margin-right: 4vw;
       margin-top: -3vh; }
       section article .tilbud h3 {
@@ -240,15 +397,48 @@ section {
         font-size: 3vw;
         text-align: center; }
       section article .tilbud button {
-        background-color: #003335;
+        background-color: #013335;
         border-radius: 15px;
-        width: 20vw;
+        width: 30vw;
         height: 10vh;
         color: white;
         font-size: 1.5em;
         border: none; }
 
 @media only screen and (max-width: 1200px) {
+  section article main .beskrivelse img {
+    width: 40%; }
+  section article .infobox img {
+    width: 90%;
+    grid-column: span 12;
+    margin-top: 2vh; }
+  section article .infobox .info {
+    grid-column: span 12;
+    text-align: center; }
+  section article .nyhed {
+    min-height: 70vh; }
+  section article .nyhed .nyhedsbrev button {
+    width: 85vw; }
+  section article .nyhed .nyhedsbrev {
+    grid-column: span 12; }
+  section article .kundeservice {
+    grid-column: span 12;
+    display: grid;
+    justify-items: center; }
+  span {
+    font-size: 1.9vw; }
+  p {
+    font-size: 1.9vw; }
+  strong {
+    font-size: 2.2vw; }
+  .order {
+    grid-column: span 12; }
+    .order img {
+      width: 85%;
+      margin-top: 5vh; }
+  .contactInfo {
+    grid-column: 2 / span 11;
+    display: grid; }
   section article aside {
     grid-column: 2 / span 11; }
   section article main {
