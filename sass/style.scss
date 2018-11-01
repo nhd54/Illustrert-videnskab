@@ -152,6 +152,17 @@ section {
       grid-gap: 20px;
       padding: 1vw;
 
+      .right {
+        text-align: right;
+        width: 50%;
+        float: right;
+      }
+
+      .left {
+        width: 50%;
+        float: left;
+      }
+
       .shortText {
         grid-column: 2 / span 5;
         align-self: flex-end;
@@ -559,8 +570,15 @@ section {
 
       h3 {
         color: $redcolor;
+        width: 51%;
+        float: left;
         font-size: 3vw;
-        text-align: center;
+      }
+
+      #dropdown {
+        width: 49%;
+        float: right;
+        margin-top: 3%;
       }
 
       button {

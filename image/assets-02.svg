@@ -1,0 +1,18 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38.9375 36">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        stroke: #043335;
+        stroke-miterlimit: 10;
+        stroke-width: 4.29875px;
+      }
+    </style>
+  </defs>
+  <title>assets</title>
+  <circle class="cls-1" cx="19.46875" cy="18" r="14.68765"/>
+  <polyline class="cls-2" points="12.284 18.465 16.664 25.54 26.097 10.042"/>
+</svg>

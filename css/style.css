@@ -108,6 +108,13 @@ section {
       grid-template-columns: repeat(6, 1fr);
       grid-gap: 20px;
       padding: 1vw; }
+      section article .andreTilbud .right {
+        text-align: right;
+        width: 50%;
+        float: right; }
+      section article .andreTilbud .left {
+        width: 50%;
+        float: left; }
       section article .andreTilbud .shortText {
         grid-column: 2 / span 5;
         align-self: flex-end;
@@ -394,8 +401,13 @@ section {
       margin-top: -3vh; }
       section article .tilbud h3 {
         color: #c91f26;
-        font-size: 3vw;
-        text-align: center; }
+        width: 51%;
+        float: left;
+        font-size: 3vw; }
+      section article .tilbud #dropdown {
+        width: 49%;
+        float: right;
+        margin-top: 3%; }
       section article .tilbud button {
         background-color: #013335;
         border-radius: 15px;
