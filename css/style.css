@@ -1,6 +1,7 @@
 * {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  font-family: "Century Gothic"; }
 
 span {
   font-size: 0.9vw; }
@@ -9,7 +10,7 @@ p {
   font-size: 0.9vw; }
 
 strong {
-  font-size: 1.2vw; }
+  font-size: 1vw; }
 
 body {
   overflow-x: hidden; }
@@ -30,6 +31,7 @@ section {
     grid-column: span 12;
     background-color: #013335;
     display: grid;
+    height: 21vh;
     grid-template-columns: repeat(12, 1fr); }
     section header .logo {
       grid-column: span 12;
@@ -37,12 +39,12 @@ section {
       display: grid; }
       section header .logo img {
         justify-self: center;
-        align-self: center;
-        width: 50%; }
+        align-self: center; }
     section header .info {
       grid-column: span 12;
       display: grid;
       background: #83bcaa;
+      height: 11vh;
       grid-template-columns: repeat(12, 1fr); }
       section header .info span {
         grid-column: span 3;
@@ -50,13 +52,16 @@ section {
         display: grid;
         align-items: center;
         justify-items: center;
-        font-size: 1.3vw;
+        font-size: 0.7vw;
         text-align: center; }
         section header .info span img {
           width: 22%; }
         section header .info span img:nth-child(3) {
-          width: 30%;
           align-self: flex-start; }
+        section header .info span .binding {
+          width: 22%; }
+        section header .info span .smallHead {
+          width: 30%; }
   section .midPicture {
     grid-column: span 12;
     min-height: 50vh;
@@ -72,34 +77,36 @@ section {
     grid-template-columns: repeat(12, 1fr);
     min-height: 40vh;
     height: auto;
-    background: #83bcaa; }
+    background-color: #013335;
+    padding: 4vw 0 0 0; }
     section footer .footerInfo {
       grid-column: span 3;
       justify-self: center;
-      align-self: center;
-      font-size: 1vw;
-      color: white; }
+      font-size: 0.8vw;
+      color: white;
+      line-height: 1.5vw; }
       section footer .footerInfo img {
-        width: 80%; }
+        width: 12vw; }
   section article {
     grid-column: span 12;
     display: grid;
     grid-template-columns: repeat(12, 1fr); }
     section article .theProduct {
       grid-column: span 12;
-      min-height: 80vh;
+      min-height: 70vh;
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       background-color: #013335;
       margin-top: 5vh; }
       section article .theProduct .text {
         align-self: center;
-        height: 70%;
+        height: 54vh;
         grid-column: 2 / span 4;
-        color: white; }
+        color: white;
+        line-height: 2vw; }
       section article .theProduct .picture {
-        grid-column: 7 / span 5;
-        width: 80%;
+        grid-column: 6 / span 6;
+        width: 37vw;
         align-self: center;
         justify-self: center; }
     section article .andreTilbud {
@@ -108,42 +115,60 @@ section {
       grid-template-columns: repeat(6, 1fr);
       grid-gap: 20px;
       padding: 1vw; }
+      section article .andreTilbud .tilbudende p {
+        text-align: center;
+        font-size: 1vw; }
+      section article .andreTilbud .porto {
+        font-size: 0.8vw;
+        text-align: left; }
       section article .andreTilbud .right {
         text-align: right;
         width: 50%;
-        float: right; }
+        padding: 1.9vw 0 0 0;
+        float: right;
+        font-weight: 900; }
       section article .andreTilbud .left {
         width: 50%;
-        float: left; }
+        font-weight: 900;
+        float: left;
+        font-size: 1.8vw; }
       section article .andreTilbud .shortText {
         grid-column: 2 / span 5;
         align-self: flex-end;
-        justify-self: flex-start; }
+        justify-self: flex-start;
+        font-size: 1.6vw;
+        font-weight: 100; }
       section article .andreTilbud img {
         width: 100%; }
       section article .andreTilbud button {
         background-color: #013335;
-        border-radius: 15px;
+        border-radius: 11px;
         width: 20vw;
-        height: 10vh;
+        height: 8vh;
         color: white;
-        font-size: 1.5em;
-        border: none; }
+        font-size: 1.3em;
+        margin: 0.2vw 0 0 0;
+        border: 3px solid #83bcaa; }
     section article .kundeservice {
       grid-column: span 6;
       display: grid; }
       section article .kundeservice .readers {
         text-align: center;
-        width: 80%; }
+        width: 40vw;
+        height: 29vh; }
       section article .kundeservice button {
-        margin-top: 4vh;
         background-color: #013335;
-        border-radius: 25px;
-        width: 30vw;
-        height: 8vh;
+        width: 16vw;
+        height: 7vh;
+        margin: 0.3vw 0 0 0;
+        border-radius: 14px;
         color: white;
-        font-size: 1.5em;
-        border: none; }
+        font-size: 1.3vw;
+        border: 3px solid #83bcaa; }
+      section article .kundeservice .stars {
+        width: 16vw; }
+      section article .kundeservice p {
+        line-height: 2vw; }
     section article .payment {
       grid-column: span 12;
       display: grid;
@@ -298,37 +323,37 @@ section {
           line-height: 36px; }
     section article .nyhed {
       grid-column: span 12;
-      min-height: 75vh;
+      min-height: 62vh;
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       margin-top: 5vh; }
       section article .nyhed .nyhedsbrev {
-        grid-column: 2 / span 5; }
+        grid-column: 2 / span 5;
+        width: 37vw; }
         section article .nyhed .nyhedsbrev form {
-          text-align: center;
           margin-top: 3vh; }
           section article .nyhed .nyhedsbrev form input {
             width: 77%;
             height: 6vh;
             border-radius: 5px;
-            margin-top: 2vh;
+            margin-top: 1vh;
+            padding: 0 0 0 1vw;
             border: 2px solid #013335; }
         section article .nyhed .nyhedsbrev h2 {
-          font-size: 2vw;
-          text-align: center; }
+          font-size: 2vw; }
         section article .nyhed .nyhedsbrev p {
-          padding: 2vw 0vw 2vw 6.3vw; }
+          line-height: 2vw; }
         section article .nyhed .nyhedsbrev span {
-          padding: 1vw 9vw; }
+          padding: 0; }
         section article .nyhed .nyhedsbrev button {
-          margin: 2vw 0vw 2vw 6.3vw;
+          margin: 0.5vw 0 0 0;
           background-color: #013335;
-          border-radius: 25px;
-          width: 15vw;
-          height: 10vh;
+          border-radius: 14px;
+          width: 12vw;
+          height: 7vh;
           color: white;
-          font-size: 1.5em;
-          border: none; }
+          font-size: 1.3vw;
+          border: 3px solid #83bcaa; }
     section article .infobox {
       margin-top: 5vh;
       min-height: 80vh;
@@ -347,8 +372,11 @@ section {
         align-content: center;
         flex-direction: column;
         color: white; }
+      section article .infobox .tick {
+        width: 1.2vw;
+        margin: 0 0.5vw 0 0; }
     section article aside {
-      margin-top: 3vh;
+      margin-top: 12vh;
       grid-column: 2 / span 5;
       display: grid;
       grid-gap: 10px;
@@ -356,66 +384,75 @@ section {
       grid-template-rows: repeat(6, 1fr);
       margin-left: 0.5vw; }
       section article aside .little {
-        width: 100%; }
+        width: 7.6vw; }
       section article aside .big {
         grid-column: 2 / span 5;
         grid-row: 1 / span 4;
-        width: 82%; }
+        width: 34vw; }
       section article aside .voresTilbud {
-        grid-column: 3 / span 2;
+        grid-column: 2 / span 3;
         grid-row: span 2;
-        align-self: center; }
+        align-self: center;
+        width: 26vw;
+        padding: 0 0 0 2vw; }
         section article aside .voresTilbud .tilbuddet {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           justify-items: center; }
         section article aside .voresTilbud img {
-          width: 100%; }
+          width: 11vw; }
         section article aside .voresTilbud img:nth-child(2) {
-          width: 55%;
+          width: 3vw;
           align-self: center; }
         section article aside .voresTilbud img:nth-child(3) {
-          width: 130%; }
+          width: 8vw; }
     section article main {
       grid-column: span 5;
-      padding-top: 3vh;
-      grid-row-gap: 30px;
+      padding-top: 11vh;
+      grid-row-gap: 12px;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      margin: 0 0 0 4vw;
+      grid-template-columns: repeat(2, 0fr);
       grid-template-rows: 14% 25% 25% 36%; }
       section article main .beskrivelse {
         display: grid;
-        justify-items: center; }
+        justify-items: center;
+        width: 15vw;
+        margin: 0px 0 0 1vw; }
         section article main .beskrivelse img {
-          width: 20%; }
+          width: 6vw; }
         section article main .beskrivelse p {
-          text-align: center; }
+          text-align: center;
+          font-size: 0.8vw; }
     section article h2 {
       grid-column: span 2;
       justify-self: center;
-      font-size: 3vw; }
+      font-size: 1.6vw;
+      font-weight: 900; }
     section article .tilbud {
       grid-column: span 2;
       justify-self: center;
-      margin-right: 4vw;
-      margin-top: -3vh; }
+      margin-right: -3vw;
+      margin-top: 7vh; }
       section article .tilbud h3 {
         color: #c91f26;
         width: 51%;
         float: left;
-        font-size: 3vw; }
+        font-size: 2vw; }
       section article .tilbud #dropdown {
-        width: 49%;
+        width: 12vw;
+        height: 2vw;
         float: right;
-        margin-top: 3%; }
+        margin-top: 0.4vw; }
       section article .tilbud button {
         background-color: #013335;
         border-radius: 15px;
         width: 30vw;
-        height: 10vh;
+        height: 7vh;
+        border: 3px solid #83bcaa;
         color: white;
         font-size: 1.5em;
-        border: none; }
+        margin: 0.5vw 0 0 0; }
 
 @media only screen and (max-width: 1200px) {
   section article main .beskrivelse img {

@@ -5,6 +5,7 @@ $redcolor: #c91f26;
 * {
   padding: 0;
   margin: 0;
+  font-family: "Century Gothic";
 }
 
 span {
@@ -14,7 +15,7 @@ p {
   font-size: 0.9vw;
 }
 strong {
-  font-size: 1.2vw;
+  font-size: 1vw;
 }
 
 body {
@@ -39,6 +40,7 @@ section {
     grid-column: span 12;
     background-color: $color;
     display: grid;
+    height: 21vh;
     grid-template-columns: repeat(12, 1fr);
 
     .logo {
@@ -49,14 +51,14 @@ section {
       img {
         justify-self: center;
         align-self: center;
-        width: 50%;
       }
     }
     .info {
       grid-column: span 12;
       display: grid;
       background: $secondcolor;
-
+      height: 11vh;
+      padding: 0.3vw 0 0 0;
       grid-template-columns: repeat(12, 1fr);
 
       span {
@@ -65,7 +67,7 @@ section {
         display: grid;
         align-items: center;
         justify-items: center;
-        font-size: 1.3vw;
+        font-size: 0.7vw;
         text-align: center;
 
         img {
@@ -73,8 +75,14 @@ section {
         }
 
         img:nth-child(3) {
-          width: 30%;
           align-self: flex-start;
+        }
+        .binding {
+          width: 22%;
+        }
+
+        .smallHead {
+          width: 30%;
         }
       }
     }
@@ -99,17 +107,18 @@ section {
     grid-template-columns: repeat(12, 1fr);
     min-height: 40vh;
     height: auto;
-    background: $secondcolor;
+    background-color: $color;
+    padding: 4vw 0 0 0;
 
     .footerInfo {
       grid-column: span 3;
       justify-self: center;
-      align-self: center;
-      font-size: 1vw;
+      font-size: 0.8vw;
       color: white;
+      line-height: 1.5vw;
 
       img {
-        width: 80%;
+        width: 12vw;
       }
     }
   }
@@ -124,7 +133,7 @@ section {
 
     .theProduct {
       grid-column: span 12;
-      min-height: 80vh;
+      min-height: 70vh;
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       background-color: $color;
@@ -132,14 +141,15 @@ section {
 
       .text {
         align-self: center;
-        height: 70%;
+        height: 54vh;
         grid-column: 2 / span 4;
         color: white;
+        line-height: 2vw;
       }
 
       .picture {
-        grid-column: 7 / span 5;
-        width: 80%;
+        grid-column: 6 / span 6;
+        width: 37vw;
         align-self: center;
         justify-self: center;
       }
@@ -152,21 +162,37 @@ section {
       grid-gap: 20px;
       padding: 1vw;
 
+      .tilbudende p {
+        text-align: center;
+        font-size: 1vw;
+      }
+
+      .porto {
+        font-size: 0.8vw;
+        text-align: left;
+      }
+
       .right {
         text-align: right;
         width: 50%;
+        padding: 1.9vw 0 0 0;
         float: right;
+        font-weight: 900;
       }
 
       .left {
         width: 50%;
+        font-weight: 900;
         float: left;
+        font-size: 1.8vw;
       }
 
       .shortText {
         grid-column: 2 / span 5;
         align-self: flex-end;
         justify-self: flex-start;
+        font-size: 1.6vw;
+        font-weight: 100;
       }
 
       img {
@@ -174,13 +200,14 @@ section {
       }
 
       button {
-        background-color: $color;
-        border-radius: 15px;
+        background-color: #013335;
+        border-radius: 11px;
         width: 20vw;
-        height: 10vh;
+        height: 8vh;
         color: white;
-        font-size: 1.5em;
-        border: none;
+        font-size: 1.3em;
+        margin: 0.2vw 0 0 0;
+        border: 3px solid #83bcaa;
       }
     }
 
@@ -190,18 +217,27 @@ section {
 
       .readers {
         text-align: center;
-        width: 80%;
+        width: 40vw;
+        height: 29vh;
       }
 
       button {
-        margin-top: 4vh;
         background-color: $color;
-        border-radius: 25px;
-        width: 30vw;
-        height: 8vh;
+        width: 16vw;
+        height: 7vh;
+        margin: 0.3vw 0 0 0;
+        border-radius: 14px;
         color: white;
-        font-size: 1.5em;
-        border: none;
+        font-size: 1.3vw;
+        border: 3px solid #83bcaa;
+      }
+
+      .stars {
+        width: 16vw;
+      }
+
+      p {
+        line-height: 2vw;
       }
     }
     .payment {
@@ -418,48 +454,48 @@ section {
     }
     .nyhed {
       grid-column: span 12;
-      min-height: 75vh;
+      min-height: 62vh;
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       margin-top: 5vh;
 
       .nyhedsbrev {
         grid-column: 2 / span 5;
+        width: 37vw;
 
         form {
-          text-align: center;
           margin-top: 3vh;
 
           input {
             width: 77%;
             height: 6vh;
             border-radius: 5px;
-            margin-top: 2vh;
-            border: 2px solid $color;
+            margin-top: 1vh;
+            padding: 0 0 0 1vw;
+            border: 2px solid #013335;
           }
         }
 
         h2 {
           font-size: 2vw;
-          text-align: center;
         }
         p {
-          padding: 2vw 0vw 2vw 6.3vw;
+          line-height: 2vw;
         }
 
         span {
-          padding: 1vw 9vw;
+          padding: 0;
         }
 
         button {
-          margin: 2vw 0vw 2vw 6.3vw;
-          background-color: $color;
-          border-radius: 25px;
-          width: 15vw;
-          height: 10vh;
+          margin: 0.5vw 0 0 0;
+          background-color: #013335;
+          border-radius: 14px;
+          width: 12vw;
+          height: 7vh;
           color: white;
-          font-size: 1.5em;
-          border: none;
+          font-size: 1.3vw;
+          border: 3px solid #83bcaa;
         }
       }
     }
@@ -485,11 +521,15 @@ section {
         flex-direction: column;
         color: white;
       }
+      .tick {
+        width: 1.2vw;
+        margin: 0 0.5vw 0 0;
+      }
     }
 
     // styling af venstre side
     aside {
-      margin-top: 3vh;
+      margin-top: 12vh;
       grid-column: 2 / span 5;
       display: grid;
       grid-gap: 10px;
@@ -498,19 +538,21 @@ section {
       margin-left: 0.5vw;
 
       .little {
-        width: 100%;
+        width: 7.6vw;
       }
 
       .big {
         grid-column: 2 / span 5;
         grid-row: 1 / span 4;
-        width: 82%;
+        width: 34vw;
       }
 
       .voresTilbud {
-        grid-column: 3 / span 2;
+        grid-column: 2 / span 3;
         grid-row: span 2;
         align-self: center;
+        width: 26vw;
+        padding: 0 0 0 2vw;
 
         .tilbuddet {
           display: grid;
@@ -519,16 +561,16 @@ section {
         }
 
         img {
-          width: 100%;
+          width: 11vw;
         }
 
         img:nth-child(2) {
-          width: 55%;
+          width: 3vw;
           align-self: center;
         }
 
         img:nth-child(3) {
-          width: 130%;
+          width: 8vw;
         }
       }
     }
@@ -536,59 +578,64 @@ section {
     // styling af højre side
     main {
       grid-column: span 5;
-      padding-top: 3vh;
-      grid-row-gap: 30px;
-
+      padding-top: 11vh;
+      grid-row-gap: 12px;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      margin: 0 0 0 4vw;
+      grid-template-columns: repeat(2, 0fr);
       grid-template-rows: 14% 25% 25% 36%;
 
       .beskrivelse {
         display: grid;
         justify-items: center;
-
+        width: 15vw;
+        margin: 0px 0 0 1vw;
         img {
-          width: 20%;
+          width: 6vw;
         }
 
         p {
           text-align: center;
+          font-size: 0.8vw;
         }
       }
     }
     h2 {
       grid-column: span 2;
       justify-self: center;
-      font-size: 3vw;
+      font-size: 1.6vw;
+      font-weight: 900;
     }
     .tilbud {
       grid-column: span 2;
       justify-self: center;
 
-      margin-right: 4vw;
-      margin-top: -3vh;
+      margin-right: -3vw;
+      margin-top: 7vh;
 
       h3 {
         color: $redcolor;
         width: 51%;
         float: left;
-        font-size: 3vw;
+        font-size: 2vw;
       }
 
       #dropdown {
-        width: 49%;
+        width: 12vw;
+        height: 2vw;
         float: right;
-        margin-top: 3%;
+        margin-top: 0.4vw;
       }
 
       button {
         background-color: $color;
         border-radius: 15px;
         width: 30vw;
-        height: 10vh;
+        height: 7vh;
+        border: 3px solid $secondcolor;
         color: white;
         font-size: 1.5em;
-        border: none;
+        margin: 0.5vw 0 0 0;
       }
     }
   }
